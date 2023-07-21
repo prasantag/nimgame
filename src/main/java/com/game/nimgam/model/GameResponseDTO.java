@@ -11,7 +11,7 @@ public class GameResponseDTO {
     private Long gameId;
     private Action computerAction;
     private Action humanAction;
-    private Boolean computerActed;
+    private Boolean computerActed = Boolean.FALSE;
     private Integer initialMatches;
     private Set<Integer> matchesRemovalAllowedSet;
     private String winner;

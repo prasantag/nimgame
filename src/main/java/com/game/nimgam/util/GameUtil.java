@@ -10,7 +10,7 @@ import java.util.Set;
 public class GameUtil {
     public Integer generateValidRandomNumber(Set<Integer> matchesRemovalAllowed, Integer matchesLeft) {
         int allowedRandomSize = (int)matchesRemovalAllowed.stream().filter(e -> e <= matchesLeft).count();
-        log.info("matches Left:{} and count:{}", matchesLeft, allowedRandomSize);
+        log.debug("matches Left:{} and count:{}", matchesLeft, allowedRandomSize);
         int randomIndex = (int) (Math.random() * (allowedRandomSize - 1) + 1);
         return (Integer) matchesRemovalAllowed.toArray()[randomIndex - 1];
     }

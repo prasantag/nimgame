@@ -7,7 +7,6 @@ import com.game.nimgam.service.GameService;
 import com.game.nimgam.service.NimBoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,9 +33,9 @@ public class GameController {
         return  new ResponseEntity(gameService.getGame(gameId), HttpStatus.OK);
     }
 
-    @PatchMapping("/player-action")
+    @PutMapping("/player-action")
     public ResponseEntity playerAction(@RequestBody GameRequestDTO gameRequest) throws InvalidMatchesRemovalException {
         log.info("gameRequest: {}", gameRequest);
-        return new ResponseEntity(gameService.processHumanAction(gameRequest), HttpStatus.MULTI_STATUS);
+        return new ResponseEntity(gameService.processHumanAction(gameRequest), HttpStatus.OK);
     }
 }

@@ -5,7 +5,6 @@ import com.game.nimgam.model.Action;
 import com.game.nimgam.model.GameRequestDTO;
 import com.game.nimgam.util.GameUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

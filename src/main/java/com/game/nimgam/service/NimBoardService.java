@@ -4,7 +4,6 @@ import com.game.nimgam.entity.NimBoard;
 import com.game.nimgam.model.NimBoardDTO;
 import com.game.nimgam.repository.NimBoardRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
