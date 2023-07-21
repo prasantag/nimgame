@@ -1,0 +1,5 @@
+game:
+  matches:
+    initial: 17
+    removal:
+      allowed: 1,2,3
