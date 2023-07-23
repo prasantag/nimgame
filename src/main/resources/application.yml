@@ -1,6 +1,11 @@
 game:
   matches:
-    initial: 17
+    initial: 13
     removal:
       allowed: 1,2,3
 
+spring:
+  cache:
+    cache-names: nimGames
+  h2:
+    console.enabled: true

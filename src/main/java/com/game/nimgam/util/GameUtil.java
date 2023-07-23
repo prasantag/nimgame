@@ -3,7 +3,9 @@ package com.game.nimgam.util;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -15,7 +17,8 @@ public class GameUtil {
         return (Integer) matchesRemovalAllowed.toArray()[randomIndex - 1];
     }
 
-    public int matchesRemovalEntries(Set<Integer> matchesRemovalAllowedSet, Integer matchesRemoved) {
-        return (int) matchesRemovalAllowedSet.stream().filter(r -> r == matchesRemoved).count();
+    public Set<Integer> getMatchesRemovalOptionSet(final String matchesRemovalOptions) {
+        return Arrays.stream(matchesRemovalOptions.split(","))
+                .map(Integer::valueOf).collect(Collectors.toSet());
     }
 }

@@ -1,5 +1,6 @@
 package com.game.nimgam.model;
 
+import com.game.nimgam.constants.Player;
 import lombok.Builder;
 import lombok.Data;
 
@@ -9,10 +10,9 @@ import java.util.Set;
 @Data
 public class GameResponseDTO {
     private Long gameId;
-    private Action computerAction;
-    private Action humanAction;
-    private Boolean computerActed = Boolean.FALSE;
+    private ActionItem playerAction;
+    private Boolean computerActed;
     private Integer initialMatches;
     private Set<Integer> matchesRemovalAllowedSet;
-    private String winner;
+    private Player winner;
 }

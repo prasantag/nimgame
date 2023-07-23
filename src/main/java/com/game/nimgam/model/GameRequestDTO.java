@@ -8,5 +8,5 @@ import lombok.Data;
 public class GameRequestDTO {
     private Long boardId;
     private Long gameId;
-    private Action playerAction;
+    private ActionItem playerAction;
 }
